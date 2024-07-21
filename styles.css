@@ -1,0 +1,236 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+span {
+  color: red;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 55px;
+  margin: 0;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vw;
+  align-items: center;
+  padding: 0px 5vw 0px 5vw;
+  background-color: rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 20px;
+}
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav ul li a::after {
+  content: " ";
+  display: block;
+  height: 3px;
+  background: red;
+  bottom: -3px;
+  width: 0;
+  transition: width 0.3s ease, right 0.3s ease;
+}
+
+/* Background */
+
+.header-container {
+  background-image: url(../images/hero-bg-lg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.header-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  padding: 150px;
+  position: relative;
+  z-index: 1;
+}
+
+/* pfo button */
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+  padding: 15px 20px;
+  color: white;
+  font-size: 25px;
+  font-weight: normal;
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: left;
+  max-width: 100px;
+  margin: 20px 0 0 0;
+  text-decoration: none;
+}
+
+.portfolio-button:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* About */
+
+.container {
+  display: flex;
+  margin: 10vh 5vw 0px 5vw;
+  gap: 50px;
+}
+
+.container img {
+  border-radius: 10%;
+  width: 35%;
+  height: 35%;
+}
+.container h2 {
+  text-align: center;
+  margin: 0;
+}
+.tab {
+  display: flex;
+  gap: 10%;
+  font-size: larger;
+}
+
+.tab p:hover::after {
+  width: 50%;
+  left: 0;
+}
+
+.tab p::after {
+  content: " ";
+  display: block;
+  height: 3px;
+  background: red;
+  position: relative;
+  bottom: -3px;
+  width: 0;
+  transition: width 0.3s ease, right 0.3s ease;
+}
+.Skills p {
+  margin: 0px;
+}
+
+/* Services */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh 5vw 10vh 5vw;
+  align-items: center;
+}
+
+.container2 h2 {
+  margin: 10vh 5vw 10vh 5vw;
+}
+.service-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+i {
+  font-size: 50px;
+}
+.item {
+  background-color: rgb(110, 110, 110);
+  padding: 30px;
+  border-radius: 3%;
+  transition: ease-in-out 0.3s;
+}
+.item:hover {
+  background-color: #ff004f;
+  transform: translateY(-10px);
+}
+
+.item:not(:hover) {
+  transform: translateY(0);
+}
+
+.item h3 {
+  font-size: 30px;
+}
+.item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* My work */
+
+#fourth-page {
+  margin-top: 40px;
+}
+
+#fourth-page > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service {
+  flex-basis: 30%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#fourth-page img {
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  overflow: hidden;
+  transition: 0.5s;
+}
